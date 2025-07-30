@@ -1,0 +1,58 @@
+ @font-face {
+            font-family: 'Aeonik';
+            src: url('../../font/fonnts.com-Aeonik-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Aeonik', sans-serif;
+        }
+
+        .btn-cta span {
+            display: block;
+            margin-left: 0.3em;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn-cta svg {
+            display: block;
+            transform-origin: center center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .btn-cta:hover svg {
+            transform: translateX(2.5em) scale(1.1);
+        }
+
+        .btn-cta:hover span {
+            opacity: 0;
+            transition: 0.5s linear;
+        }
+
+        .btn-cta:active {
+            transform: scale(0.95);
+        }
+
+        .iti {
+            width: 100%;
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0px 1000px #090909 inset !important;
+            -webkit-text-fill-color: #e5e7eb !important;
+            transition: background-color 9999s ease-in-out 0s;
+        }
+
+
+        input:focus {
+            outline: none !important;
+            box-shadow: none !important;
+            transition: none !important;
+        }
+
+        .card-step {
+            box-shadow: 0 10px 20px rgba(75, 72, 72, 0.26);
+        }

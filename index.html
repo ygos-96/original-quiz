@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WKDLQ7SK');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário | Arte na Pele</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css" />
+    <!-- Tag Manager -->
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-ENV7CT9395"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=GTM-W9V822CK"></script>
+    <script defer src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <!-- Google tag (gtag.js) event - delayed navigation helper -->
+    <script>
+        // Helper function to delay opening a URL until a gtag event is sent.
+        // Call it in response to an action that should navigate to a URL.
+        function gtagSendEvent(url) {
+            var callback = function () {
+                if (typeof url === 'string') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion_event_outbound_click', {
+                'event_callback': callback,
+                'event_timeout': 2000,
+                // <event_parameters>
+            });
+            return false;
+        }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MYT0F4WMP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1MYT0F4WMP');
+    </script>
+    <!-- Google tag (gtag.js) event -->
+    <script>
+        gtag('event', 'conversion_event_page_view', {
+            // <event_parameters>
+        });
+    </script>
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-724414871/HLtKCIK4mbcaEJfjttkC',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s); j.async = true; j.src = "https://stape.originaltattoo.com.br/4b4ukchdbfrvh.js?" + i; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'ey7whs3i=aWQ9R1RNLVdLRExRN1NL&sort=asc');</script>
+    <!-- End Google Tag Manager -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#121212',
+                        light: '#f8f6f0'
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="src/files/css/style.css">
+</head>
+
+<body class="bg-[#121212] flex items-center min-h-screen text-white w-full">
+    <div class="w-full mx-auto px-4 py-8">
+        <form id="formOrcamento" class="space-y-10 " method="GET">
+            <div id="step1" class="space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
+                <img src="src/image/Logo Branco - 465x465.png" width="200" height="200" class="mx-auto" alt="">
+                <div class="relative">
+                    <input type="text" name="nome_form_whats" id="nome" required
+                        class="peer w-full bg-transparent border-b-2 border-l-2  rounded-bl-lg border-black focus:border-2 focus:rounded-lg px-3 pt-6 pb-2 placeholder-transparent focus:outline-none transition-all duration-300 text-gray-200 placeholder-white focus:outline-none focus:ring-0" />
+                    <span class="absolute left-[10px] top-[15px] text-xs tracking-[0.2em] capitalize px-1 transition-all duration-500 ease-in-out
+    peer-focus:translate-x-[150px] peer-focus:md:translate-x-[250px] peer-focus:-translate-y-[24px]
+    peer-valid:translate-x-[145px] peer-valid:md:translate-x-[250px] peer-valid:-translate-y-[24px]
+    text-gray-400 peer-focus:text-white peer-focus:bg-gray-600 peer-focus:px-2 peer-focus:py-1 peer-focus:rounded-md
+    peer-valid:text-white peer-valid:bg-gray-600 peer-valid:px-2 peer-valid:py-1 peer-valid:rounded-md
+    pointer-events-none">
+                        Nome completo
+                    </span>
+                </div>
+                <div class="relative">
+                    <input type="text" name="email_form_whats" id="email" required
+                        class="peer w-full bg-transparent border-b-2 border-l-2  rounded-bl-lg border-black focus:border-2 focus:rounded-lg px-3 pt-6 pb-2 placeholder-transparent focus:outline-none transition-all duration-300 text-gray-200 placeholder-white" />
+                    <span class="absolute left-[10px] top-[15px] text-xs tracking-[0.2em] capitalize px-1 transition-all duration-500 ease-in-out
+    peer-focus:translate-x-[170px] peer-focus:md:translate-x-[250px] peer-focus:-translate-y-[24px]
+    peer-valid:translate-x-[165px] peer-valid:md:translate-x-[250px] peer-valid:-translate-y-[24px]
+    text-gray-400 peer-focus:text-white peer-focus:bg-gray-600 peer-focus:px-2 peer-focus:py-1 peer-focus:rounded-md
+    peer-valid:text-white peer-valid:bg-gray-600 peer-valid:px-2 peer-valid:py-1 peer-valid:rounded-md
+    pointer-events-none">
+                        E-mail
+                    </span>
+                </div>
+                <div class="relative">
+                    <input type="tel" name="telefone_form_whats" id="telefone" required
+                        class="peer w-full bg-transparent border-b-2 border-l-2  rounded-bl-lg border-black focus:border-2 focus:rounded-lg pl-[60px] pt-6 pb-2 placeholder-transparent focus:outline-none transition-all duration-300 text-gray-200" />
+                </div>
+                <div>
+                    <button type="button" onclick="handleStep1()" class="button relative px-4 py-3 text-sm bg-gradient-to-r from-black via-gray-700 to-gray-500 rounded-md
+ font-bold ">Continuar <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                </div>
+            </div>
+            <div id="step2"
+                class="hidden space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
+                <div class="flex justify-between items-center mb-4">
+                    <p>Olá, <span id="PrimeiroNomeDoUsuario">$$</span>. Como podemos te ajudar?</p>
+                    <button type="button" onclick="voltarDoStep2()" class="text-white"><i
+                            class="fa-solid fa-arrow-left"></i></button>
+                </div>
+
+                <label>
+                    <input type="radio" name="servico" value="tattoo" class="hidden" />
+                    <div class="p-4 mb-2 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-lg ">Tatuagem
+                    </div>
+                </label>
+                <label>
+                    <input type="radio" name="servico" value="piercing" class="hidden" />
+                    <div class="p-4 mb-4 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl ">Piercing
+                    </div>
+                </label>
+
+            </div>
+            <div id="step3"
+                class="hidden space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
+                <div class="flex justify-between items-center mb-4">
+                    <p>Qual tipo de tatuagem?</p>
+                    <button type="button" onclick="voltarDoStep3()" class="text-white"><i
+                            class="fa-solid fa-arrow-left"></i></button>
+                </div>
+                <label><input type="radio" name="opcaoServico" value="novaTattoo" class="hidden" />
+                    <div class="p-4 mb-2 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl">Nova Tatuagem
+                    </div>
+                </label>
+                <label><input type="radio" name="opcaoServico" value="cobertura" class="hidden" />
+                    <div class="p-4 mb-2 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl">Cobertura
+                    </div>
+                </label>
+                <label><input type="radio" name="opcaoServico" value="tattooIndolor" class="hidden" />
+                    <div class="p-4 mb-4 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl">Tatuagem
+                        Indolor</div>
+                </label>
+            </div>
+            <div id="step4"
+                class="hidden space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
+                <div class="flex justify-end items-center mb-4">
+                    <button type="button" onclick="event.preventDefault(); voltarDoStep4()" class="text-white"><i
+                            class="fa-solid fa-arrow-left"></i></button>
+                </div>
+                <div id="nova-tattoo-detalhes" class="hidden mb-6">
+                    <p class="mb-2">Nova Tatuagem</p>
+                    <label><input type="radio" name="saibaMais" value="SaibaMaisNovaTattoo" class="hidden" />
+                        <div
+                            class="p-4 mb-2 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl cursor-pointer">
+                            Saiba mais</div>
+                    </label>
+                </div>
+                <div id="cobertura-detalhes" class="hidden mb-6">
+                    <p class="mb-2">Cobertura</p>
+                    <label><input type="radio" name="saibaMais" value="SaibaMaisCobertura" class="hidden" />
+                        <div
+                            class="p-4 mb-2 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl  cursor-pointer">
+                            Saiba mais</div>
+                    </label>
+                </div>
+                <div id="tattoo-indolor-detalhes" class="hidden mb-6">
+                    <p class="mb-2">Tatuagem Indolor</p>
+                    <label><input type="radio" name="saibaMais" value="SaibaMaisTattooIndolor" class="hidden" />
+                        <div
+                            class="p-4 mb-2 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl  cursor-pointer">
+                            Saiba mais</div>
+                    </label>
+                </div>
+                <div id="piercing-detalhes" class="hidden mb-6">
+                    <p class="mb-2">Piercing</p>
+                    <label><input type="radio" name="saibaMais" value="SaibaMaisPiercing" class="hidden" />
+                        <div
+                            class="p-4 mb-2 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl  cursor-pointer">
+                            Saiba mais</div>
+                    </label>
+                </div>
+
+                <button type="submit" id="btn-cta"
+                    class="btn-cta px-8 py-3 text-lg text-black flex items-center gap-2 border-0 rounded font-bold bg-gray-100 hover:bg-gray-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"
+                        class="fill-black ">
+                        <path
+                            d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.54.76 3.95.76a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.41.27 2.74.76 3.95a1 1 0 01-.21 1.11l-2.43 2.43z" />
+                    </svg>
+                    <span>Agendar</span>
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Modal -->
+    <div id="modalSaibaMais" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50 hidden">
+        <div class="bg-gray-800 text-white p-6 rounded-lg max-w-lg w-full relative">
+            <button onclick="fecharModal()" class="absolute top-2 right-2 text-white text-xl">&times;</button>
+            <div id="modalContent">
+                <div id="modal-conteudo-nova-tattoo" class="modal-conteudo hidden">
+                    <h2 class="text-xl font-bold mb-2">Nova Tatuagem</h2>
+                    <p>Detalhes sobre nova tatuagem.</p>
+                </div>
+                <div id="modal-conteudo-cobertura" class="modal-conteudo hidden">
+                    <h2 class="text-xl font-bold mb-2">Cobertura</h2>
+                    <p>Detalhes sobre coberturas.</p>
+                </div>
+                <div id="modal-conteudo-indolor" class="modal-conteudo hidden">
+                    <h2 class="text-xl font-bold mb-2">Tatuagem Indolor</h2>
+                    <p>Informações sobre a tatuagem sem dor.</p>
+                </div>
+                <div id="modal-conteudo-piercing" class="modal-conteudo hidden">
+                    <h2 class="text-xl font-bold mb-2">Piercing</h2>
+                    <p>Detalhes sobre piercings.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('formOrcamento');
+
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault(); // Impede envio automático do form para tratarmos manualmente
+
+                
+                setTimeout(function () {
+                    redirectToWebsite(form);
+                }, 300);
+            });
+
+            function redirectToWebsite(formElement) {
+                const utms = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+                const queryStringParts = [];
+
+                for (let i = 0; i < utms.length; i++) {
+                    const param = utms[i];
+                    const val = localStorage.getItem(param);
+                    if (val) {
+                        queryStringParts.push(encodeURIComponent(param) + '=' + encodeURIComponent(val));
+                    }
+                }
+
+                const nome = document.getElementById('nome').value.trim();
+                const mensagem = `Olá, meu nome é ${nome}, acabei de preencher o formulário no site!`;
+                let baseUrl = `https://wa.me/5511958668772?text=${encodeURIComponent(mensagem)}`;
+
+                if (queryStringParts.length > 0) {
+                    baseUrl += "&" + queryStringParts.join("&");
+                }
+
+              
+                setTimeout(function () {
+                    window.location.href = baseUrl;
+                }, 1000);
+            }
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById('formOrcamento');
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+
+                function getCookieValue(name) {
+                    const value = `; ${document.cookie}`;
+                    const parts = value.split(`; ${name}=`);
+                    return parts.length === 2 ? parts.pop().split(";").shift() : null;
+                }
+
+
+                function getFormValues(formElement) {
+                    const formData = new FormData(formElement);
+                    const values = {};
+
+                    for (const [key, value] of formData.entries()) {
+                        values[key] = value;
+                    }
+                    return values;
+                }
+
+                // objeto com cookies
+                const cookieData = {
+                    stape_user_id: getCookieValue("stape_user_id"),
+                    fbp: getCookieValue("_fbp"),
+                    fbc: getCookieValue("_fbc"),
+                    fr: getCookieValue("fr"),
+                    gclid: getCookieValue("GCL_AW_P"),
+                    ttclid: getCookieValue("tt_gclid"),
+                    tt_utm_source: getCookieValue("tt_utm_source"),
+                    tt_utm_medium: getCookieValue("tt_utm_medium"),
+                    tt_utm_campaign: getCookieValue("tt_utm_campaign"),
+                    tt_utm_term: getCookieValue("tt_utm_term"),
+                    tt_utm_content: getCookieValue("tt_utm_content"),
+                    name: getCookieValue("name_cookie"),
+                    email: getCookieValue("email_cookie"),
+                    phone: getCookieValue("phone_cookie"),
+                    fn: getCookieValue("fn_cookie"),
+                    ln: getCookieValue("ln_cookie"),
+                    fpid: getCookieValue("FPID"),
+                    fplc: getCookieValue("FPLC"),
+                    ctwaClid: getCookieValue("ctwaClid"),
+                };
+
+                const formValues = getFormValues(form);
+
+                const webhookData = {
+                    ...cookieData,
+                    ...formValues
+                };
+
+                console.log(webhookData);
+
+                // Envia via webhook (substitua pela sua URL)
+                fetch("https://webhook.tuzinho.app/webhook/cookieG4", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(webhookData),
+                })
+                    .then((res) => {
+                        if (res.ok) {
+                            window.dataLayer = window.dataLayer || [];
+                            window.dataLayer.push({
+                                event: "iniciou_video"
+                            });
+                            console.log("✅ Dados enviados ao webhook com sucesso");
+                        } else {
+                            console.error("❌ Erro ao enviar dados:", res.statusText);
+                        }
+                    })
+                    .catch((err) => {
+                        console.error("❗ Erro de rede ou CORS:", err);
+                    });
+            });
+        });
+
+    </script>
+
+    <script>
+         let currentStep = 1;
+        const steps = ['step1', 'step2', 'step3', 'step4'];
+        let servicoEscolhido = '';
+        let tipoTattooEscolhido = '';
+        let saibaMaisEscolhido = '';
+        let iti;
+
+        function showStep(id) {
+            steps.forEach(s => {
+                document.getElementById(s)?.classList.add('hidden');
+            });
+            document.getElementById(id)?.classList.remove('hidden');
+        }
+
+        function nextStep(id) {
+            if (id === 'step4') showServiceDetail();
+            showStep(id);
+        }
+
+        function voltarDoStep2() {
+            showStep('step1');
+        }
+
+        function voltarDoStep3() {
+            showStep('step2');
+        }
+
+        function voltarDoStep4() {
+            if (servicoEscolhido === 'piercing') {
+                showStep('step2');
+            } else {
+                showStep('step3');
+            }
+        }
+
+        function showServiceDetail() {
+            document.getElementById('nova-tattoo-detalhes')?.classList.add('hidden');
+            document.getElementById('cobertura-detalhes')?.classList.add('hidden');
+            document.getElementById('tattoo-indolor-detalhes')?.classList.add('hidden');
+            document.getElementById('piercing-detalhes')?.classList.add('hidden');
+
+            if (servicoEscolhido === 'piercing') {
+                document.getElementById('piercing-detalhes')?.classList.remove('hidden');
+            } else {
+                if (tipoTattooEscolhido === 'novaTattoo') {
+                    document.getElementById('nova-tattoo-detalhes')?.classList.remove('hidden');
+                } else if (tipoTattooEscolhido === 'cobertura') {
+                    document.getElementById('cobertura-detalhes')?.classList.remove('hidden');
+                } else if (tipoTattooEscolhido === 'tattooIndolor') {
+                    document.getElementById('tattoo-indolor-detalhes')?.classList.remove('hidden');
+                }
+            }
+        }
+
+        function abrirModal(contentId) {
+            const contentMap = {
+                'SaibaMaisNovaTattoo': 'modal-conteudo-nova-tattoo',
+                'SaibaMaisCobertura': 'modal-conteudo-cobertura',
+                'SaibaMaisTattooIndolor': 'modal-conteudo-indolor',
+                'SaibaMaisPiercing': 'modal-conteudo-piercing'
+            };
+            document.querySelectorAll('.modal-conteudo').forEach(el => el.classList.add('hidden'));
+            const targetId = contentMap[contentId];
+            if (targetId) {
+                document.getElementById(targetId)?.classList.remove('hidden');
+                document.getElementById('modalSaibaMais')?.classList.remove('hidden');
+            }
+        }
+
+        function fecharModal() {
+            document.getElementById('modalSaibaMais')?.classList.add('hidden');
+        }
+
+        function validarStep1() {
+            const nome = document.getElementById('nome').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!nome || nome.length < 3) {
+                alert('Por favor, insira um nome válido.');
+                return false;
+            }
+            if (!emailRegex.test(email)) {
+                alert('Por favor, insira um e-mail válido.');
+                return false;
+            }
+            if (!iti.isValidNumber()) {
+                alert('Por favor, insira um número de telefone válido.');
+                return false;
+            }
+            return true;
+        }
+
+        function handleStep1() {
+            if (validarStep1()) {
+                const nomeCompleto = document.getElementById('nome').value.trim();
+                const primeiroNome = nomeCompleto.split(' ')[0] || '';
+                document.getElementById('PrimeiroNomeDoUsuario').textContent = primeiroNome;
+                document.getElementById('step1').classList.add('hidden');
+                document.getElementById('step2').classList.remove('hidden');
+            }
+        }
+
+        function aplicarMascaraTelefone(input) {
+    input.addEventListener('input', function(e) {
+        let v = input.value.replace(/\D/g, "");
+        if (v.length > 11) v = v.slice(0, 11);
+        if (v.length > 0) v = "(" + v;
+        if (v.length > 3) v = v.slice(0, 3) + ") " + v.slice(3);
+        if (v.length > 4) v = v.slice(0, 6) + " " + v.slice(6);
+        if (v.length > 10) v = v.slice(0, 11) + "-" + v.slice(11);
+        input.value = v;
+    });
+}
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const telefoneInput = document.getElementById('telefone');
+            iti = window.intlTelInput(telefoneInput, {
+                initialCountry: "br",
+                nationalMode: true,
+                separateDialCode: true,
+                formatOnDisplay: true,
+                autoHideDialCode: false,
+                utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"
+            });
+               aplicarMascaraTelefone(telefoneInput);
+
+            showStep('step1');
+
+            document.querySelectorAll('input[name="servico"]').forEach(input => {
+                input.closest('label')?.addEventListener('click', () => {
+                    setTimeout(() => {
+                        if (input.checked) {
+                            servicoEscolhido = input.value;
+                            if (servicoEscolhido === 'tattoo') {
+                                nextStep('step3');
+                            } else {
+                                nextStep('step4');
+                            }
+                        }
+                    }, 0);
+                });
+            });
+
+            document.querySelectorAll('input[name="opcaoServico"]').forEach(input => {
+                input.closest('label')?.addEventListener('click', () => {
+                    setTimeout(() => {
+                        if (input.checked) {
+                            tipoTattooEscolhido = input.value;
+                            nextStep('step4');
+                        }
+                    }, 0);
+                });
+            });
+
+            document.querySelectorAll('input[name="saibaMais"]').forEach(input => {
+                input.closest('label')?.addEventListener('click', () => {
+                    setTimeout(() => {
+                        if (input.checked) {
+                            saibaMaisEscolhido = input.value;
+                            abrirModal(saibaMaisEscolhido);
+                        }
+                    }, 0);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

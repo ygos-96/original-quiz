@@ -89,6 +89,48 @@
         }
     </script>
     <link rel="stylesheet" href="src/files/css/style.css">
+
+    <style>
+        /* From Uiverse.io by gharsh11032000 */
+        .btn-animate {
+            cursor: pointer;
+            position: relative;
+            color: #a6a6a6;
+            border: 2px solid #a6a6a6;
+            background-color: transparent;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            overflow: hidden;
+        }
+
+        .btn-animate::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            width: 50px;
+            height: 50px;
+            border-radius: inherit;
+            scale: 0;
+            z-index: -1;
+            background-color: #a6a6a6;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        .btn-animate:hover::before {
+            scale: 5;
+        }
+
+        .btn-animate:hover {
+            color: #212121;
+            scale: 1.1;
+            box-shadow: 0 0px 20px #a6a6a6;
+        }
+
+        .btn-animate:active {
+            scale: 1;
+        }
+    </style>
 </head>
 
 <body class="bg-[#121212] flex items-center min-h-screen text-white w-full">
@@ -125,100 +167,104 @@
                         class="peer w-full bg-transparent border-b-2 border-l-2  rounded-bl-lg border-black focus:border-2 focus:rounded-lg pl-[60px] pt-6 pb-2 placeholder-transparent focus:outline-none transition-all duration-300 text-gray-200" />
                 </div>
                 <div>
-                    <button type="button" onclick="handleStep1()" class="button relative px-4 py-3 text-sm bg-gradient-to-r from-black via-gray-700 to-gray-500 rounded-md
+                    <button type="button" onclick="handleStep1()" class="btn-animate relative px-4 py-3 text-sm rounded-md
  font-bold ">Continuar <i class="fas fa-arrow-right ml-2"></i>
                     </button>
                 </div>
             </div>
-            <div id="step2"
-                class="hidden space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
+            <div id="step2" class=" space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
+                <p class="mb-4">Olá, <span id="PrimeiroNomeDoUsuario">$$</span>. Como podemos te ajudar?</p>
+                <div class="flex flex-col justify-end items-end">
+                    <label>
+                        <input type="radio" name="servico" value="tattoo" class="hidden" />
+                        <div class="p-4 mb-2 btn-animate rounded-lg max-w-[150px] w-[150px]">Tatuagem
+                        </div>
+                    </label>
+                    <label>
+                        <input type="radio" name="servico" value="piercing" class="hidden" />
+                        <div class="p-4 mb-4 btn-animate rounded-lg max-w-[150px] w-[150px]">Piercing
+                        </div>
+                    </label>
+                </div>
                 <div class="flex justify-between items-center mb-4">
-                    <p>Olá, <span id="PrimeiroNomeDoUsuario">$$</span>. Como podemos te ajudar?</p>
                     <button type="button" onclick="voltarDoStep2()" class="text-white"><i
                             class="fa-solid fa-arrow-left"></i></button>
                 </div>
-
-                <label>
-                    <input type="radio" name="servico" value="tattoo" class="hidden" />
-                    <div class="p-4 mb-2 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-lg ">Tatuagem
-                    </div>
-                </label>
-                <label>
-                    <input type="radio" name="servico" value="piercing" class="hidden" />
-                    <div class="p-4 mb-4 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl ">Piercing
-                    </div>
-                </label>
-
             </div>
-            <div id="step3"
-                class="hidden space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
+            <div id="step3" class=" space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
+                <p class="mb-4">Qual tipo de tatuagem?</p>
+                <div class="flex flex-col justify-end items-end">
+                    <label><input type="radio" name="opcaoServico" value="novaTattoo" class="hidden" />
+                        <div class="p-4 mb-2 btn-animate rounded-lg max-w-[180px] w-[180px]">Nova Tatuagem
+                        </div>
+                    </label>
+                    <label><input type="radio" name="opcaoServico" value="cobertura" class="hidden" />
+                        <div class="p-4 mb-2 btn-animate rounded-lg max-w-[180px] w-[180px]">Cobertura
+                        </div>
+                    </label>
+                    <label><input type="radio" name="opcaoServico" value="tattooIndolor" class="hidden" />
+                        <div class="p-4 mb-4 btn-animate rounded-lg max-w-[180px] w-[180px]">Tatuagem
+                            Indolor</div>
+                    </label>
+                </div>
+
+
                 <div class="flex justify-between items-center mb-4">
-                    <p>Qual tipo de tatuagem?</p>
                     <button type="button" onclick="voltarDoStep3()" class="text-white"><i
                             class="fa-solid fa-arrow-left"></i></button>
                 </div>
-                <label><input type="radio" name="opcaoServico" value="novaTattoo" class="hidden" />
-                    <div class="p-4 mb-2 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl">Nova Tatuagem
-                    </div>
-                </label>
-                <label><input type="radio" name="opcaoServico" value="cobertura" class="hidden" />
-                    <div class="p-4 mb-2 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl">Cobertura
-                    </div>
-                </label>
-                <label><input type="radio" name="opcaoServico" value="tattooIndolor" class="hidden" />
-                    <div class="p-4 mb-4 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl">Tatuagem
-                        Indolor</div>
-                </label>
             </div>
-            <div id="step4"
-                class="hidden space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
-                <div class="flex justify-end items-center mb-4">
-                    <button type="button" onclick="event.preventDefault(); voltarDoStep4()" class="text-white"><i
-                            class="fa-solid fa-arrow-left"></i></button>
+            <div id="step4" class=" space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
+                <div id="nova-tattoo-detalhes" class="">
+                    <div class="flex flex-col justify-end items-end">
+                        <p class="mb-2">Nova Tatuagem</p>
+                        <label><input type="radio" name="saibaMais" value="SaibaMaisNovaTattoo" class="hidden" />
+                            <div class="p-4 mb-2 btn-animate rounded-lg max-w-[180px] w-[180px] cursor-pointer">
+                                Saiba mais</div>
+                        </label>
+                    </div>
                 </div>
-                <div id="nova-tattoo-detalhes" class="hidden mb-6">
-                    <p class="mb-2">Nova Tatuagem</p>
-                    <label><input type="radio" name="saibaMais" value="SaibaMaisNovaTattoo" class="hidden" />
-                        <div
-                            class="p-4 mb-2 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl cursor-pointer">
-                            Saiba mais</div>
-                    </label>
+                <div id="cobertura-detalhes" class="hidden">
+                    <div class="flex flex-col justify-end items-end">
+                        <p class="mb-2">Cobertura</p>
+                        <label><input type="radio" name="saibaMais" value="SaibaMaisCobertura" class="hidden" />
+                            <div class="p-4 mb-2 btn-animate rounded-lg max-w-[180px] w-[180px]  cursor-pointer">
+                                Saiba mais</div>
+                        </label>
+                    </div>
                 </div>
-                <div id="cobertura-detalhes" class="hidden mb-6">
-                    <p class="mb-2">Cobertura</p>
-                    <label><input type="radio" name="saibaMais" value="SaibaMaisCobertura" class="hidden" />
-                        <div
-                            class="p-4 mb-2 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl  cursor-pointer">
-                            Saiba mais</div>
-                    </label>
+                <div id="tattoo-indolor-detalhes" class="hidden">
+                    <div class="flex flex-col justify-end items-end">
+                        <p class="mb-2">Tatuagem Indolor</p>
+                        <label><input type="radio" name="saibaMais" value="SaibaMaisTattooIndolor" class="hidden" />
+                            <div class="p-4 mb-2 btn-animate rounded-lg max-w-[180px] w-[180px] cursor-pointer">
+                                Saiba mais</div>
+                        </label>
+                    </div>
                 </div>
-                <div id="tattoo-indolor-detalhes" class="hidden mb-6">
-                    <p class="mb-2">Tatuagem Indolor</p>
-                    <label><input type="radio" name="saibaMais" value="SaibaMaisTattooIndolor" class="hidden" />
-                        <div
-                            class="p-4 mb-2 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl  cursor-pointer">
-                            Saiba mais</div>
-                    </label>
-                </div>
-                <div id="piercing-detalhes" class="hidden mb-6">
-                    <p class="mb-2">Piercing</p>
-                    <label><input type="radio" name="saibaMais" value="SaibaMaisPiercing" class="hidden" />
-                        <div
-                            class="p-4 mb-2 bg-gradient-to-r from-black via-gray-600 to-gray-400 rounded-xl  cursor-pointer">
-                            Saiba mais</div>
-                    </label>
+                <div id="piercing-detalhes" class="hidden">
+                    <div class="flex flex-col justify-end items-end">
+                        <p class="mb-2">Piercing</p>
+                        <label><input type="radio" name="saibaMais" value="SaibaMaisPiercing" class="hidden" />
+                            <div class="p-4 mb-2 btn-animate rounded-lg max-w-[180px] w-[180px] cursor-pointer">
+                                Saiba mais</div>
+                        </label>
+                    </div>
                 </div>
 
-                <button type="submit" id="btn-cta"
-                    class="btn-cta px-8 py-3 text-lg text-black flex items-center gap-2 border-0 rounded font-bold bg-gray-100 hover:bg-gray-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"
-                        class="fill-black ">
-                        <path
-                            d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.21.49 2.54.76 3.95.76a1 1 0 011 1V20a1 1 0 01-1 1C10.07 21 3 13.93 3 5a1 1 0 011-1h3.5a1 1 0 011 1c0 1.41.27 2.74.76 3.95a1 1 0 01-.21 1.11l-2.43 2.43z" />
-                    </svg>
-                    <span>Agendar</span>
-                </button>
-            </div>
+                <div class="flex justify-between items-end mb-4">
+                    <button type="button" onclick="event.preventDefault(); voltarDoStep4()" class="text-white"><i
+                            class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button type="submit" id="btn-cta"
+                        class="btn-animate rounded-lg max-w-[180px] w-[180px] px-8 py-3 text-lg flex items-center gap-2 rounded font-bold">
+                        <i class="fa-solid fa-phone"></i>
+                        </svg>
+                        <span>Agendar</span>
+                    </button>
+
+
+                </div>
         </form>
     </div>
 
@@ -256,7 +302,7 @@
             form.addEventListener('submit', function (e) {
                 e.preventDefault(); // Impede envio automático do form para tratarmos manualmente
 
-                
+
                 setTimeout(function () {
                     redirectToWebsite(form);
                 }, 300);
@@ -282,7 +328,7 @@
                     baseUrl += "&" + queryStringParts.join("&");
                 }
 
-              
+
                 setTimeout(function () {
                     window.location.href = baseUrl;
                 }, 1000);
@@ -375,7 +421,7 @@
     </script>
 
     <script>
-         let currentStep = 1;
+        let currentStep = 1;
         const steps = ['step1', 'step2', 'step3', 'step4'];
         let servicoEscolhido = '';
         let tipoTattooEscolhido = '';
@@ -478,16 +524,16 @@
         }
 
         function aplicarMascaraTelefone(input) {
-    input.addEventListener('input', function(e) {
-        let v = input.value.replace(/\D/g, "");
-        if (v.length > 11) v = v.slice(0, 11);
-        if (v.length > 0) v = "(" + v;
-        if (v.length > 3) v = v.slice(0, 3) + ") " + v.slice(3);
-        if (v.length > 4) v = v.slice(0, 6) + " " + v.slice(6);
-        if (v.length > 10) v = v.slice(0, 11) + "-" + v.slice(11);
-        input.value = v;
-    });
-}
+            input.addEventListener('input', function (e) {
+                let v = input.value.replace(/\D/g, "");
+                if (v.length > 11) v = v.slice(0, 11);
+                if (v.length > 0) v = "(" + v;
+                if (v.length > 3) v = v.slice(0, 3) + ") " + v.slice(3);
+                if (v.length > 4) v = v.slice(0, 6) + " " + v.slice(6);
+                if (v.length > 10) v = v.slice(0, 11) + "-" + v.slice(11);
+                input.value = v;
+            });
+        }
 
         document.addEventListener('DOMContentLoaded', () => {
             const telefoneInput = document.getElementById('telefone');
@@ -499,7 +545,7 @@
                 autoHideDialCode: false,
                 utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/utils.js"
             });
-               aplicarMascaraTelefone(telefoneInput);
+            aplicarMascaraTelefone(telefoneInput);
 
             showStep('step1');
 

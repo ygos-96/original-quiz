@@ -2,38 +2,32 @@
 <html lang="pt-BR">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário | Arte na Pele</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css" />
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#121212',
-                        light: '#f8f6f0'
-                    },
-                    fontFamily: {
-                        heading: ['Playfair Display', 'serif'],
-                        body: ['Montserrat', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="src/files/css/style.css">
-
     <style>
-        /* From Uiverse.io by gharsh11032000 */
+        body>text {
+            display: none !important;
+        }
+
+        body {
+            font-size: 0 !important;
+        }
+
+        body * {
+            font-size: initial;
+        }
+
         .btn-animate {
             cursor: pointer;
             position: relative;
-            color: #a6a6a6;
-            border: 2px solid #a6a6a6;
+            color: #f8f6f0;
+            border: 2px solid #f8f6f0;
             background-color: transparent;
             font-weight: 600;
             transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
@@ -50,7 +44,7 @@
             border-radius: inherit;
             scale: 0;
             z-index: -1;
-            background-color: #a6a6a6;
+            background-color: #f8f6f0;
             transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
         }
 
@@ -61,67 +55,153 @@
         .btn-animate:hover {
             color: #212121;
             scale: 1.1;
-            box-shadow: 0 0px 20px #a6a6a6;
+            box-shadow: 0 0px 20px #f8f6f0;
         }
 
         .btn-animate:active {
             scale: 1;
         }
 
-        .rounded-priv{
+        .rounded-priv {
             border-top-left-radius: 50px;
             border-bottom-left-radius: 50px;
+        }
+
+
+        iframe[style*="display: none"][height="0"][width="0"] {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
         }
     </style>
 </head>
 
-<body class="bg-[#121212] flex items-center min-h-screen text-white w-full">
-    <div class="w-full mx-auto px-4 py-8">
+<body class="bg-[#121212] flex items-center min-h-screen text-light w-full">
+
+    <div id="iniciar" class="relative w-full max-w-md mx-auto block md:hidden opacity-0 animate__animated animate__fadeIn">
+        <!-- Imagem -->
+        <img src="src/image/tatto-inicio.png" alt="Tatoo de inicio" class="w-full h-auto object-cover" />
+
+        <!-- Overlay preto semi-transparente -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <!-- Texto centralizado -->
+        <p
+            class="absolute inset-0 flex items-center justify-center text-white text-3xl font-semibold z-10 text-center px-4 capitalize">
+            Um jeito diferente de tatuar
+        </p>
+    </div>
+
+    <div class="w-full mx-auto px-4 py-8 hidden md:block" id="form-container">
         <form id="formOrcamento" class="space-y-10 " method="GET">
             <div id="step1" class="space-y-6 max-w-4xl mx-auto bg-[#090909] rounded-lg text-gray-100 card-step">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="space-y-6 p-6 ">
+                    <div class=" text-center">
                         <img src="src/image/Logo Branco - 465x465.png" width="200" height="200" class="mx-auto" alt="">
-                        <div class="relative">
-                            <input type="text" name="nome_form_whats" id="nome" required
-                                class="peer w-full bg-transparent border-b-2 border-l-2  rounded-bl-lg border-black focus:border-2 focus:rounded-lg px-3 pt-6 pb-2 placeholder-transparent focus:outline-none transition-all duration-300 text-gray-200 placeholder-white focus:outline-none focus:ring-0" />
-                            <span class="absolute left-[10px] top-[15px] text-xs tracking-[0.2em] capitalize px-1 transition-all duration-500 ease-in-out
+                        <h2 class="text-2xl font-bold mt-4 text-light">Vamos começar!</h2>
+                        <p class="text-sm sm:text-base text-gray-400 max-w-sm mx-auto pt-2">Forneça essas informações
+                            para melhorar sua
+                            experiência</p>
+                        <div class="space-y-6 p-6">
+                            <div class="relative">
+                                <input type="text" name="nome_form_whats" id="nome" required
+                                    class="peer w-full bg-transparent border-b-2 border-l-2  rounded-bl-lg border-black focus:border-2 focus:rounded-lg px-3 pt-6 pb-2 placeholder-transparent focus:outline-none transition-all duration-300 text-gray-200 placeholder-white focus:outline-none focus:ring-0" />
+                                <span class="absolute left-[10px] top-[15px] text-xs tracking-[0.2em] capitalize px-1 transition-all duration-500 ease-in-out
     peer-focus:translate-x-[150px] peer-focus:md:translate-x-[250px] peer-focus:-translate-y-[24px]
     peer-valid:translate-x-[145px] peer-valid:md:translate-x-[250px] peer-valid:-translate-y-[24px]
-    text-gray-400 peer-focus:text-white peer-focus:bg-gray-600 peer-focus:px-2 peer-focus:py-1 peer-focus:rounded-md
-    peer-valid:text-white peer-valid:bg-gray-600 peer-valid:px-2 peer-valid:py-1 peer-valid:rounded-md
+    text-gray-400 peer-focus:text-light peer-focus:bg-gray-600 peer-focus:px-2 peer-focus:py-1 peer-focus:rounded-md
+    peer-valid:text-light peer-valid:bg-gray-600 peer-valid:px-2 peer-valid:py-1 peer-valid:rounded-md
     pointer-events-none">
-                                Nome completo
-                            </span>
-                        </div>
-                        <div class="relative">
-                            <input type="text" name="email_form_whats" id="email" required
-                                class="peer w-full bg-transparent border-b-2 border-l-2  rounded-bl-lg border-black focus:border-2 focus:rounded-lg px-3 pt-6 pb-2 placeholder-transparent focus:outline-none transition-all duration-300 text-gray-200 placeholder-white" />
-                            <span class="absolute left-[10px] top-[15px] text-xs tracking-[0.2em] capitalize px-1 transition-all duration-500 ease-in-out
+                                    Nome completo
+                                </span>
+                            </div>
+                            <div class="relative">
+                                <input type="text" name="email_form_whats" id="email" required
+                                    class="peer w-full bg-transparent border-b-2 border-l-2  rounded-bl-lg border-black focus:border-2 focus:rounded-lg px-3 pt-6 pb-2 placeholder-transparent focus:outline-none transition-all duration-300 text-gray-200 placeholder-white" />
+                                <span class="absolute left-[10px] top-[15px] text-xs tracking-[0.2em] capitalize px-1 transition-all duration-500 ease-in-out
     peer-focus:translate-x-[170px] peer-focus:md:translate-x-[250px] peer-focus:-translate-y-[24px]
     peer-valid:translate-x-[165px] peer-valid:md:translate-x-[250px] peer-valid:-translate-y-[24px]
-    text-gray-400 peer-focus:text-white peer-focus:bg-gray-600 peer-focus:px-2 peer-focus:py-1 peer-focus:rounded-md
-    peer-valid:text-white peer-valid:bg-gray-600 peer-valid:px-2 peer-valid:py-1 peer-valid:rounded-md
+    text-gray-400 peer-focus:text-light peer-focus:bg-gray-600 peer-focus:px-2 peer-focus:py-1 peer-focus:rounded-md
+    peer-valid:text-light peer-valid:bg-gray-600 peer-valid:px-2 peer-valid:py-1 peer-valid:rounded-md
     pointer-events-none">
-                                E-mail
-                            </span>
+                                    E-mail
+                                </span>
+                            </div>
+                            <div class="relative">
+                                <input type="tel" name="telefone_form_whats" id="telefone" required
+                                    class="peer w-full bg-transparent border-b-2 border-l-2  rounded-bl-lg border-black focus:border-2 focus:rounded-lg pl-[60px] pt-6 pb-2 placeholder-transparent focus:outline-none transition-all duration-300 text-gray-200" />
+                            </div>
+                            <button type="button" id="btn-cta" onclick="handleStep1()"
+                                class="btn-animate relative px-4 py-3 text-sm rounded-full font-bold ">Continuar <i
+                                    class="fas fa-arrow-right ml-2"></i>
+                            </button>
                         </div>
-                        <div class="relative">
-                            <input type="tel" name="telefone_form_whats" id="telefone" required
-                                class="peer w-full bg-transparent border-b-2 border-l-2  rounded-bl-lg border-black focus:border-2 focus:rounded-lg pl-[60px] pt-6 pb-2 placeholder-transparent focus:outline-none transition-all duration-300 text-gray-200" />
-                        </div>
-                        <button type="button" onclick="handleStep1()" class="btn-animate relative px-4 py-3 text-sm rounded-full
- font-bold ">Continuar <i class="fas fa-arrow-right ml-2"></i>
-                        </button>
                     </div>
+                    <div
+                        class="bg-gradient-to-br from-gray-600 via-[#090909] to-black p-8 hidden md:flex flex-col justify-center rounded-priv rounded-tr-lg rounded-br-lg">
+                        <div class="space-y-6">
+                            <h3 class="text-2xl font-bold text-light">Por que nos informar seus dados?</h3>
 
-                    <div class="bg-white rounded-tr-lg rounded-br-lg rounded-priv pl-16 hidden md:block">
-                        <p class="text-black">Forneça essas informações para melhorar sua experiência</p>
+                            <div class="benefit-item flex items-center space-x-4">
+                                <div class="flex-shrink-0 bg-white/20 py-2 px-3 rounded-full">
+                                    <i class="fas fa-bolt text-light"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-light font-bold">Processo mais rápido</h4>
+                                    <p class="text-light/80 text-sm">Agilizamos seu atendimento com suas informações
+                                        salvas</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item flex items-center space-x-4">
+                                <div class="flex-shrink-0 bg-white/20 py-2 px-3 rounded-full">
+                                    <i class="fa-solid fa-tag"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-light font-bold">Experiência personalizada</h4>
+                                    <p class="text-light/80 text-sm">Oferecemos soluções específicas para suas
+                                        necessidades</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item flex items-center space-x-4">
+                                <div class="flex-shrink-0 bg-white/20 py-2 px-3 rounded-full">
+                                    <i class="fa-solid fa-wallet"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-light font-bold">Orçamento Personalizado</h4>
+                                    <p class="text-light/80 text-sm">Com seus dados, conseguimos oferecer um valor mais
+                                        preciso e justo para o seu caso.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item flex items-center space-x-4">
+                                <div class="flex-shrink-0 bg-white/20 py-2 px-3 rounded-full">
+                                    <i class="fa-solid fa-calendar"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-light font-bold">Facilidade no Agendamento</h4>
+                                    <p class="text-light/80 text-sm">Agende sua tattoo ou piercing com mais praticidade,
+                                        sem burocracia e direto pelo WhatsApp.</p>
+                                </div>
+                            </div>
+                            <div class="mt-8">
+                                <div class="flex items-center space-x-3">
+                                    <div class="flex -space-x-2">
+                                        <img class="w-8 h-8 rounded-full border-2 border-black"
+                                            src="https://randomuser.me/api/portraits/women/1.jpg" alt="">
+                                        <img class="w-8 h-8 rounded-full border-2 border-black"
+                                            src="https://randomuser.me/api/portraits/men/28.jpg" alt="">
+                                        <img class="w-8 h-8 rounded-full border-2 border-black"
+                                            src="https://randomuser.me/api/portraits/women/14.jpg" alt="">
+                                    </div>
+                                    <span class="text-sm text-light/80">+999 pessoas já confiaram em nós</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
-
-
             </div>
             <div id="step2" class="space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
                 <p class="mb-4">Olá, <span id="PrimeiroNomeDoUsuario">$$</span>. Como podemos te ajudar?</p>
@@ -138,11 +218,11 @@
                     </label>
                 </div>
                 <div class="flex justify-between items-center mb-4">
-                    <button type="button" onclick="voltarDoStep2()" class="text-white"><i
+                    <button type="button" onclick="voltarDoStep2()" class="text-light"><i
                             class="fa-solid fa-arrow-left"></i></button>
                 </div>
             </div>
-            <div id="step3" class=" space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
+            <div id="step3" class="space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
                 <p class="mb-4">Qual tipo de tatuagem?</p>
                 <div class="flex flex-col justify-end items-end">
                     <label><input type="radio" name="opcaoServico" value="novaTattoo" class="hidden" />
@@ -155,21 +235,20 @@
                     </label>
                     <label><input type="radio" name="opcaoServico" value="tattooIndolor" class="hidden" />
                         <div class="p-4 mb-4 btn-animate rounded-full max-w-[180px] w-[180px]">Tatuagem
-                            Indolor</div>
+                            sem dor</div>
                     </label>
                 </div>
 
 
                 <div class="flex justify-between items-center mb-4">
-                    <button type="button" onclick="voltarDoStep3()" class="text-white"><i
+                    <button type="button" onclick="voltarDoStep3()" class="text-light"><i
                             class="fa-solid fa-arrow-left"></i></button>
                 </div>
             </div>
-
-            <div id="step4" class=" space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
+            <div id="step4" class="space-y-6 max-w-md mx-auto bg-[#090909] p-6 rounded-lg text-gray-100 card-step">
                 <div id="nova-tattoo-detalhes" class="">
+                    <p class="mb-2">Nova Tatuagem</p>
                     <div class="flex flex-col justify-end items-end">
-                        <p class="mb-2">Nova Tatuagem</p>
                         <label><input type="radio" name="saibaMais" value="SaibaMaisNovaTattoo" class="hidden" />
                             <div class="p-4 mb-2 btn-animate rounded-full max-w-[180px] w-[180px] cursor-pointer">
                                 Saiba mais</div>
@@ -177,8 +256,8 @@
                     </div>
                 </div>
                 <div id="cobertura-detalhes" class="hidden">
+                    <p class="mb-2">Cobertura</p>
                     <div class="flex flex-col justify-end items-end">
-                        <p class="mb-2">Cobertura</p>
                         <label><input type="radio" name="saibaMais" value="SaibaMaisCobertura" class="hidden" />
                             <div class="p-4 mb-2 btn-animate rounded-full max-w-[180px] w-[180px]  cursor-pointer">
                                 Saiba mais</div>
@@ -186,8 +265,8 @@
                     </div>
                 </div>
                 <div id="tattoo-indolor-detalhes" class="hidden">
+                    <p class="mb-2">Tatuagem Indolor</p>
                     <div class="flex flex-col justify-end items-end">
-                        <p class="mb-2">Tatuagem Indolor</p>
                         <label><input type="radio" name="saibaMais" value="SaibaMaisTattooIndolor" class="hidden" />
                             <div class="p-4 mb-2 btn-animate rounded-full max-w-[180px] w-[180px] cursor-pointer">
                                 Saiba mais</div>
@@ -203,108 +282,120 @@
                         </label>
                     </div>
                 </div>
-
                 <div class="flex justify-between items-end mb-4">
-                    <button type="button" onclick="event.preventDefault(); voltarDoStep4()" class="text-white"><i
+                    <button type="button" onclick="event.preventDefault(); voltarDoStep4()" class="text-light"><i
                             class="fa-solid fa-arrow-left"></i>
                     </button>
-                    <button type="submit" id="btn-cta"
-                        class="btn-animate rounded-full max-w-[180px] w-[180px] px-8 py-3 text-lg flex items-center gap-2 rounded font-bold">
-                        <i class="fa-solid fa-phone"></i>
-                        </svg>
-                        <span>Agendar</span>
+                    <button type="submit" id="btn-lead"
+                        class="btn-animate rounded-full max-w-[300px] w-[250px] px-8 py-3 text-lg flex items-center gap-2 rounded font-bold">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i>
+                        <span>Falar com alguém</span>
                     </button>
-
-
                 </div>
+            </div>
         </form>
     </div>
 
     <!-- Modal -->
-    <div id="modalSaibaMais" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50 hidden">
-        <div class="bg-gray-800 text-white p-6 rounded-lg max-w-lg w-full relative">
+    <div id="modalSaibaMais" class="fixed inset-0 flex items-center justify-center bg-black/70 z-50 hidden">
+        <div class="bg-[#121212] text-light p-6 rounded-lg max-w-lg w-full relative mx-3 md:mx-0">
             <button onclick="fecharModal()" class="absolute top-2 right-2 text-white text-xl">&times;</button>
             <div id="modalContent">
-                <div id="modal-conteudo-nova-tattoo" class="modal-conteudo hidden">
-                    <h2 class="text-xl font-bold mb-2">Nova Tatuagem</h2>
-                    <p>Com 20 anos de atividade, somos referência nacional em tatuagem.
-                        Dominamos todos os estilos e somos especializado em realismo PB e colorido
-                        Nossa equipe está preparada para te auxiliar no desenvolvimento da ideia, montagem e
-                        execução da tattoo</p>
+                <div id="modal-conteudo-nova-tattoo" class="modal-conteudo text-white hidden">
+                    <h2 class="text-xl text-light font-bold mb-2">Nova Tatuagem</h2>
+                    <p class="">Com mais de 20 anos de história, a Original SP Tattoo se tornou referência nacional em
+                        tatuagens de alto nível.
+                        Aqui, você encontra uma equipe de artistas premiados, prontos para transformar sua ideia em uma
+                        obra de arte única — seja qual for o estilo, com destaque especial para o realismo preto e cinza
+                        ou colorido.
 
-                    <button>
-                        Fazer minha nova tattoo
-                    </button>
+                        Estamos prontos para te orientar em cada etapa: da criação à execução da sua tattoo, com
+                        segurança, técnica e cuidado com cada detalhe.
+
+                        Quer tirar sua ideia do papel com quem realmente entende?
+                        Fale agora com um dos nossos especialistas através do botão abaixo e receba atendimento
+                        personalizado no WhatsApp.</p>
                 </div>
-                <div id="modal-conteudo-cobertura" class="modal-conteudo hidden">
+                <div id="modal-conteudo-cobertura" class="modal-conteudo text-white hidden">
                     <h2 class="text-xl font-bold mb-2">Cobertura</h2>
-                    <p>Detalhes sobre coberturas.</p>
+                    <p>Nossos tatuadores são especialistas em técnicas avançadas de cobertura, combinando criatividade,
+                        precisão e experiência para transformar tatuagens antigas em novas obras de arte.
+                        Cada cover-up é planejado de forma personalizada, respeitando seu estilo e valorizando sua pele
+                        ao máximo.
+
+                        Quer apagar o passado e conquistar uma tattoo que você realmente tenha orgulho de mostrar?
+                        Fale agora com um especialista e descubra a melhor solução para o seu caso.</p>
                 </div>
-                <div id="modal-conteudo-indolor" class="modal-conteudo hidden">
+                <div id="modal-conteudo-indolor" class="modal-conteudo text-white hidden">
                     <h2 class="text-xl font-bold mb-2">Tatuagem Indolor</h2>
-                    <p>nossos tatuadores dominam diversas técnicas de cobertura, combinando criatividade e precisão para
-                        redesenhar ou esconder tatuagens antigas com perfeição. Cada cover-up é pensado para
-                        valorizar sua pele</p>
-                    <button>Quero cobrir uma tattoo</button>
+                    <p>NumbFlow é um método exclusivo que une técnicas avançadas de tatuagem sem dor com o suporte de
+                        uma equipe médica especializada, dentro de um ambiente clínico autorizado.
+
+                        Você pode fechar o braço, a perna ou outras grandes áreas do corpo em uma única sessão — sem
+                        sofrimento, sem pausas, com total segurança e conforto.
+
+                        Quer viver a experiência de fazer uma tattoo completa sem dor e com resultado impecável?
+                        Fale agora com nossa equipe e descubra como funciona o NumbFlow.</p>
                 </div>
-                <div id="modal-conteudo-piercing" class="modal-conteudo hidden">
+                <div id="modal-conteudo-piercing" class="modal-conteudo text-white hidden">
                     <h2 class="text-xl font-bold mb-2">Piercing</h2>
-                    <p>NumbFlow é um conjunto de técnicas de tatuagem sem dor junto com uma equipe médica nunca clinica
-                        especializada. Você pode fechar diversas partes do corpo numa sessão única sem sofrer no
-                        processo, garantindo uma experiência tranquilo e um resultado perfeito</p>
-                    <button>
-                        Tatue sem dor
-                    </button>
+                    <p>Aqui na Original SP Tattoo, você conta com profissionais experientes, materiais 100%
+                        esterilizados e um ambiente controlado, pensado para garantir um procedimento rápido, higiênico
+                        e praticamente indolor.
+
+                        Quer colocar (ou trocar) seu piercing com total confiança?
+                        Chama a gente no WhatsApp e agende com quem entende do assunto.</p>
                 </div>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
 
-    <script src="src/files/js/script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const isMobile = window.innerWidth < 768;
+        const iniciarDiv = document.getElementById('iniciar');
+        const formContainer = document.getElementById('form-container');
+        const texto = iniciarDiv.querySelector('p');
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('formOrcamento');
+       
+        const tempoDoTexto = 500;          // Aparece o texto após 0.5s
+        const tempoDaIntro = 3000;         // Duração total antes de mostrar o formulário
+        const tempoDoFadeOut = 800;        // Duração do fadeout antes de ocultar a imagem
+
+        if (isMobile) {
+            // Etapa 1: fadeIn da imagem já está no HTML (com Animate.css)
+            texto.classList.add('opacity-0', 'animate__animated');
+
+            // Etapa 2: texto entra com fadeIn depois de 0.5s
+            setTimeout(() => {
+                texto.classList.add('animate__fadeIn');
+                texto.classList.remove('opacity-0');
+            }, tempoDoTexto);
+
+            // Etapa 3: fadeOut da imagem inteira depois de 2.5s
+            setTimeout(() => {
+                iniciarDiv.classList.add('animate__fadeOut');
+
+                // Etapa 4: após fadeOut, oculta imagem e mostra formulário
+                setTimeout(() => {
+                    iniciarDiv.classList.add('hidden');
+                    formContainer.classList.remove('hidden');
+                }, tempoDoFadeOut);
+
+            }, tempoDaIntro);
+        } else {
+            // Em telas grandes, exibe só o form direto
+            iniciarDiv.classList.add('hidden');
+            formContainer.classList.remove('hidden');
+        }
+    });
+</script>
 
 
-            form.addEventListener('submit', function (e) {
-                e.preventDefault(); // Impede envio automático do form para tratarmos manualmente
-
-
-                setTimeout(function () {
-                    redirectToWebsite(form);
-                }, 300);
-            });
-
-            function redirectToWebsite(formElement) {
-                const utms = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
-                const queryStringParts = [];
-
-                for (let i = 0; i < utms.length; i++) {
-                    const param = utms[i];
-                    const val = localStorage.getItem(param);
-                    if (val) {
-                        queryStringParts.push(encodeURIComponent(param) + '=' + encodeURIComponent(val));
-                    }
-                }
-
-                const nome = document.getElementById('nome').value.trim();
-                const mensagem = `Olá, meu nome é ${nome}, acabei de preencher o formulário no site!`;
-                let baseUrl = `https://wa.me/5511958668772?text=${encodeURIComponent(mensagem)}`;
-
-                if (queryStringParts.length > 0) {
-                    baseUrl += "&" + queryStringParts.join("&");
-                }
-
-
-                setTimeout(function () {
-                    window.location.href = baseUrl;
-                }, 1000);
-            }
-        });
-    </script>
-
+    <script src="src/files/js/steps.js"></script>
+    <script src="src/files/js/redirectToWebsite.js"></script>
+    <script src="src/files/js/webhook.js"></script>
 </body>
 
 </html>
